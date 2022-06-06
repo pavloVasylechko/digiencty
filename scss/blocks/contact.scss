@@ -1,0 +1,103 @@
+.contact{
+    padding: 120px 0px 60px;
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__title{
+        text-align: center;
+        margin: 0 auto;
+    }
+    &__container-img{
+        width: 100%;
+        height: auto;
+    }
+    &__table{
+        border: 1px solid #333;
+        margin-top: 60px;
+        width: 100%;
+        td {
+            border: 1px solid #333;
+        }
+
+        thead,
+        tfoot {
+            background-color: #333;
+            color: #fff;
+        }
+
+    }
+    &__title{
+        margin-bottom: 18px;
+    }
+    &__form{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 18px 10px;
+    }
+    &__input,
+    &__select,
+    &__area{
+        box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+        border: none;
+        width: 270px;
+        height: 45px;
+        padding-left: 18px;
+        background-color:#fff;
+        font-family: 'WorkSans', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #7B7B7B;
+        &::placeholder{
+            font-family: 'WorkSans', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: #7B7B7B;
+        }
+    }
+    &__select{
+        width: 100%;
+    }
+    &__area{
+        padding-top: 18px;
+        width: 570px;
+        height: 150px;
+        resize: none;
+    }
+    &__form-btn{
+        border:none;
+        cursor: pointer;
+        width: 190px;
+    }
+    &__area,
+    &__select,
+    &__input-phone{
+        grid-column: span 2;
+    }
+}
+
+#theme-togle:checked ~ .contact{
+    .contact__title,
+    .contact__container-title,
+    .contact__table{
+        color:#fff;
+    }
+    .contact__table{
+        td{
+            border-color: #fff;
+        }
+    }
+    .contact__input,
+    .contact__area,
+    .contact__select,
+    option{
+        background-color:#18191a;
+        color:#fff;
+        &::placeholder{
+            color:#fff;
+        }
+    }
+}
